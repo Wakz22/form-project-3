@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-Project</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Abbey code start -->
+    <main class="register-page">
+        <h2>Register Page</h2>
+        <input type="text" placeholder="search" class="search"><button>Search</button>
+        <form id="form" autocomplete="off">
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" class="Name" placeholder="enter your First name" >
+            </div>
+            <div class="form-group">
+                <label for="last_name" >Last Name:</label>
+                <input type="text" id="last_name" name="last_name"  placeholder="enter your last name"  >
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" placeholder="+234...."  >
+            </div>
+            <!-- Abbey code stop -->
+            <!-- Carlos starts here -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="example@gmail.com"  >
+            </div>
+            <div class="form-group">
+                <label for="pass_word">Password:</label>
+                <input type="password" id="pass_word" name="pass_word" placeholder="input your password" >
+            </div>
+            <button type="submit" class="submitBtn">Submit</button>
+        </form>
+
+        <div class="form-table">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th id="id">ID</th>
+                        <th id="phoneNum">Phone Number</th>
+                        <th id="email">Email</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>
