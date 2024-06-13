@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset form fields
             registrationForm.reset();
         }).catch((error) => {
+            alert(error)
 
         })
         // e.preventDefault();//prevent form from loading when form is been submited
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for delete button click
     userList.addEventListener('click', (e) => {
         if (e.target.classList.contains('deleteBtn')) {
-            const Id = parseInt(e.target.getAttribute('data-id'));
+            let userId = parseInt(e.target.getAttribute('data-id'));
             deleteUser(userId);
         }
     });
@@ -131,6 +132,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 email: email,
                 password: password
             };
+            let validation = (newUser.email == "" && newUser.lastName == "") && (newUser.phoneNumber == "" && newUser.email== "")  || newUser.password == "";
+      
+            if(validation){
+                reject("All Field Required... ")
+
+            }else{
+                setTimeout(()=>{
+                    resolve(newUser)
+                }, 1000)
+            }
             //Ends here
             setTimeout(()=> {
                 resolve(newUser)
